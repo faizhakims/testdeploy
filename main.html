@@ -3,11 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seminar</title>
+    <title>Profile Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .profile-image {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin: 0 auto 24px;
+            object-fit: cover;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+        
+        .name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        
+        .title {
+            font-size: 1.25rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 24px;
+        }
+        
+        .bio {
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 60px 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .section {
+            background: #f8f9fa;
+            padding: 32px;
+            border-radius: 16px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #495057;
+        }
+        
+        .skills-list {
+            list-style: none;
+        }
+        
+        .skills-list li {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skills-list li::before {
+            content: "•";
+            color: #667eea;
+            font-weight: bold;
+            display: inline-block;
+            width: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #495057;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #6c757d;
+            font-size: 0.9rem;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 40px 20px;
+            }
+            
+            .name {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 40px 20px;
+                gap: 30px;
+            }
+            
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                margin: 10px;
+            }
+            
+            .header {
+                padding: 30px 15px;
+            }
+            
+            .name {
+                font-size: 1.75rem;
+            }
+            
+            .content {
+                padding: 30px 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Test 2</h1>
-    <h1>Faiz Muhammad Hakim</h1>
-    <img src="wajah.png" alt="">
+    <div class="container">
+        <div class="header">
+            <img src="wajah.png" alt="Profile Picture" class="profile-image">
+            <h1 class="name">Faiz Muhammad Hakim</h1>
+            <p class="title">Mahasiswa Informatika</p>
+            <p class="bio">Saya merupakan mahasiswa yang tertarik pada bidang IT</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">Tentang Saya</h2>
+                <p>Saya merupakan mahasiswa semester 6 yang tertarik pada bidang IT</p>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Keahlian</h2>
+                <ul class="skills-list">
+                    <li>Satu</li>
+                    <li>Dua</li>
+                    <li>Tiga</li>
+                    <li>Empat</li>
+                    <li>Lima</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Kontak</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <span>email@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📱</span>
+                        <span>+62 XXX XXXX XXX</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <span>Surabaya, Indonesia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2026 Nama Anda. All rights reserved.</p>
+        </div>
+    </div>
 </body>
 </html>
+
